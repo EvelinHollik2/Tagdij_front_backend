@@ -1,6 +1,7 @@
  <?php
     header('Content-Type: application/json; charset=utf-8');
     header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Headers: *');
     header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
 //fogadja az url kéréseket és megválaszolja azokat
 //GET http://localhost/TagdijBackend/index.php?ugyfel -> minden ügyfél megjelenik
