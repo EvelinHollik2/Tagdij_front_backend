@@ -18,4 +18,5 @@ document.addEventListener('DOMContentLoaded', function () {
         let response = fetch(baseUrl, options);
         alert("Sikeres feltöltés");
     })
+
 });
