@@ -4,23 +4,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const readButton = document.getElementById('read');
     const updateButton = document.getElementById('update');
     const deleteButton = document.getElementById('delete');
-    insertButton.addEventListener('click', async function () {
+
+    insertButton.addEventListener('click', function () {
+        const formm = new FormData(document.getElementById('formm'));
         let baseUrl = "http://localhost/Tagdij_front_backend/TagdijBackend/index.php?ugyfel";
-        let dataJSON = {
-            "nev": document.getElementById('nev').value,
-            "irszam": document.getElementById('irszam').value,
-            "orsz": document.getElementById('orsz').value,
-            "szulev": document.getElementById('szulev').value
-        };
         let options = {
             method: 'POST',
+            mode: "cors",
             headers: {
-                'Content-type': 'application/json'
             },
-            body: JSON.stringify(dataJSON)
+            body: formm
         };
-        let response = await fetch(baseUrl, options);
-        let data = await response.json();
-        console.log(data);
+        let response = fetch(baseUrl, options);
+        alert("Sikeres feltöltés");
     })
 });
