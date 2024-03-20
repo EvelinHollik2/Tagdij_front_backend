@@ -51,14 +51,35 @@
                 </div>
             </fieldset>
             <div class="d-flex flex justify-content-around">
-                <button type="button" class="btn btn-success" id="create">Create</button>
-                <button type="button" class="btn btn-info" id="read">Read</button>
-                <button type="button" class="btn btn-warning" id="update">Update</button>
-                <button type="button" class="btn btn-danger" id="delete">Delete</button>
+                <button type="button" class="btn btn-outline-success" id="create">Create</button>
+                <button type="button" class="btn btn-outline-info" id="read">Read</button>
+                <button type="button" class="btn btn-outline-warning" id="update">Update</button>
+                <button type="button" class="btn btn-outline-danger" id="delete">Delete</button>
             </div>
         </form>
         <div id="ugyfellista">
-
+            <table class="table table-sprited">
+                <thead>
+                    <tr>
+                        <th>Azonosító</th>
+                        <th>Név</th>
+                        <th>Születési év</th>
+                        <th>Irányítószám</th>
+                        <th>Ország</th>
+                        <th>Művelet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>1980</td>
+                        <td>1234</td>
+                        <td>USA</td>
+                        <td><button type="button" class="btn btn-outline-warning" onclick="adatBetoltes(id)" id="select">Kiválaszt</button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
