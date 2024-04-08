@@ -1,14 +1,13 @@
 <?php
 
-//-- osszes ugyfel adatai JSON-ben
 $sql = '';
-if (count($keresSzoveg) > 1) {
-    if (is_int(intval($keresSzoveg[1]))) {
-        $sql = 'DELETE FROM ugyfel WHERE azon=' . $keresSzoveg[1];
-    } else {
-        http_response_code(404);
-        echo 'Nem létező ügyfél';
-    }
+if (count($kereSzoveg) > 1) {
+    if (is_int(intval($kereSzoveg[1]))) {
+        $sql = 'DELETE FROM ugyfel WHERE azon=' . $kereSzoveg[1];
+    } 
+}else {
+    http_response_code(404);
+    echo 'Nem létező ügyfél';
 }
 require_once './databaseconnect.php';
 
